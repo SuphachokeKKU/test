@@ -7,4 +7,4 @@ import requests
 st.title("Test Streamlit deploy!!!")
 
 r = requests.get("https://wunchana.mdsolutions.in.th")
-st.text(r)
+st.text(r.text)
