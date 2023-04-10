@@ -5,13 +5,4 @@ import mysql.connector
 
 st.title("Test Streamlit deploy!!!")
 
-conn = mysql.connector.connect(**st.secrets['mysql'])
-st.text(st.secrets['host'])
-cur = None
-if(conn.is_connected()):
-    st.text("Connect to DBMS succesful!")
-    cur = conn.cursor()
-    cur.execute("show databases;")
-    st.text(cur.fetchall())
-else:
-    st.text("Connect to DBMS error!")
+st.text(st.secrets['db_host'])
