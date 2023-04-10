@@ -5,7 +5,7 @@ import mysql.connector
 
 st.title("Test Streamlit deploy!!!")
 
-conn = mysql.connector.connect(host="34.142.157.237",user="wunchana",password="wunchana")
+conn = mysql.connector.connect(**st.secrets['mysql'])
 
 cur = None
 if(conn.is_connected()):
