@@ -6,7 +6,7 @@ import mysql.connector
 st.title("Test Streamlit deploy!!!")
 
 conn = mysql.connector.connect(**st.secrets['mysql'])
-st.text(st.secrets['mysql']['host'])
+st.text(st.secrets['host'])
 cur = None
 if(conn.is_connected()):
     st.text("Connect to DBMS succesful!")
